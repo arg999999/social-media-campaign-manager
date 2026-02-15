@@ -161,7 +161,10 @@ const Campaigns = () => {
                     <TableCell>{campaign.end_date}</TableCell>
 
                     <TableCell align="right">
-                      <IconButton onClick={() => handleOpenEdit(campaign)}>
+                      <IconButton 
+                        onClick={() => handleOpenEdit(campaign)}
+                        disabled={campaign.status === 'published'}
+                        >
                         <EditIcon />
                       </IconButton>
 
